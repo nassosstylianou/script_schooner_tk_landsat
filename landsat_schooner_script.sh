@@ -1,0 +1,12 @@
+gdal_merge.py -a_nodata 0 -n 0 -co "PHOTOMETRIC=RGB" -separate ~/landsat/downloads/LC81750352013304LGN00/LC81750352013304LGN00_B{4,3,2}.TIF -o ~/landsat/downloads/LC81750352013304LGN00/LC81750352013304LGN00_rgb_NEW.tif
+
+gdal_merge.py -a_nodata 0 -n 0 -co "PHOTOMETRIC=RGB" -separate ~/landsat/downloads/LC81750362013288LGN00/LC81750362013288LGN00_B{4,3,2}.TIF -o ~/landsat/downloads/LC81750362013288LGN00/LC81750362013288LGN00_rgb_NEW.tif
+
+gdal_merge.py -a_nodata 0 -n 0 -co "PHOTOMETRIC=RGB" -separate ~/landsat/downloads/LC81760352014314LGN00/LC81760352014314LGN00_B{4,3,2}.TIF -o ~/landsat/downloads/LC81760352014314LGN00/LC81760352014314LGN00_rgb_NEW.tif
+
+gdal_merge.py -a_nodata 0 -n 0 -co "PHOTOMETRIC=RGB" -separate ~/landsat/downloads/LC81760362013295LGN01/LC81760362013295LGN01_B{4,3,2}.TIF -o ~/landsat/downloads/LC81760362013295LGN01/LC81760362013295LGN01_rgb_NEW.tif
+
+./schooner-multibalance ~/landsat/downloads/LC81750352013304LGN00/LC81750352013304LGN00_rgb_NEW.tif ~/landsat/downloads/LC81750362013288LGN00/LC81750362013288LGN00_rgb_NEW.tif ~/landsat/downloads/LC81760352014314LGN00/LC81760352014314LGN00_rgb_NEW.tif ~/landsat/downloads/LC81760362013295LGN01/LC81760362013295LGN01_rgb_NEW.tif
+
+./schooner-stitch ~/landsat/downloads/LC81750352013304LGN00/LC81750352013304LGN00_rgb_NEW.tif.balanced.tif ~/landsat/downloads/LC81750362013288LGN00/LC81750362013288LGN00_rgb_NEW.tif.balanced.tif ~/landsat/downloads/LC81760352014314LGN00/LC81760352014314LGN00_rgb_NEW.tif.balanced.tif ~/landsat/downloads/LC81760362013295LGN01/LC81760362013295LGN01_rgb_NEW.tif.balanced.tif out.tif
+
