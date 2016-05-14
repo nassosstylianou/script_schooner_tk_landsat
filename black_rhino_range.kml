@@ -40,7 +40,12 @@
 </Schema>
 <Folder><name>black_rhino_range</name>
   <Placemark>
-	<Style><LineStyle><width>.5</width><color>ff6d4b30</color></LineStyle><PolyStyle><color>ff6d4b30</color><fill>1</fill></PolyStyle></Style>
+	<Style><LineStyle><width>.5</width><color>ff6d4b30</color></LineStyle><PolyStyle>
+        <color>7f0000ff</color>
+        <colorMode>normal</colorMode>
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle></Style>
 	<ExtendedData><SchemaData schemaUrl="#black_rhino_range">
 		<SimpleData name="altitudeMo">relativeToGround</SimpleData>
 		<SimpleData name="tessellate">-1</SimpleData>
